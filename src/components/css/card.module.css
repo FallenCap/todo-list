@@ -1,0 +1,6 @@
+/* Card */
+.card {
+    border-radius: 20px;
+    display: block;
+    box-sizing: border-box;
+  }
