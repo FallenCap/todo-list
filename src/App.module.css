@@ -177,7 +177,7 @@ label {
     background: transparent;
     border: 2px solid white;
     border-radius: 20px;
-    width: 500px;
+    width: 80%;
     padding: 10px 10px;
     font-size: 1rem;
     color: white;
@@ -224,7 +224,7 @@ label {
   }
 }
 
-@media (width: 576px) {
+@media (max-width: 576px) {
   .heading {
     margin: 5rem 0 0 1.5rem;
   }
@@ -287,12 +287,6 @@ label {
     font-size: 0.8rem;
     transition: 0.3s ease-in-out;
   }
-  .insideCard .icon .icon1:hover {
-    font-size: 1.1rem;
-    transition: 0.3s ease-in-out;
-    margin: auto 0 auto 1.7rem;
-  }
-
   .insideCard .icon .icon2 {
     margin: auto 0 auto 2rem;
     color: #515151;
@@ -300,22 +294,23 @@ label {
     font-size: 1.2rem;
     transition: 0.3s ease-in-out;
   }
+
   .insideCard .icon .icon2:hover {
     margin: auto 0 auto 1.7rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     transition: 0.3s ease-in-out;
   }
 }
 
-@media (width: 360px) {
+@media (max-width: 360px) {
   form .field {
-    width: 600px;
+    width: 320px;
   }
   form .field input {
     background: transparent;
     border: 2px solid white;
     border-radius: 20px;
-    width: 60%;
+    width: 65%;
     min-width: 50%;
     padding: 6px 6px;
     height: 20px;
@@ -325,8 +320,26 @@ label {
   }
   li .cards {
     background: white;
-    width: 500px;
+    width: 320px;
     height: 80%;
     transition: 0.5s ease-in-out;
+  }
+  label {
+    font-size: 0.8rem;
+  }
+  .insideCard .icon .icon1 {
+    margin: auto 0 auto 2rem;
+    color: #515151;
+    align-items: center;
+    font-size: 0.6rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  .insideCard .icon .icon2 {
+    margin: auto 0 auto 1rem;
+    color: #515151;
+    display: flex;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
   }
 }
