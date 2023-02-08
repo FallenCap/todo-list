@@ -113,7 +113,7 @@ const App = () => {
 
       {/* Todo Space */}
 
-      <ul className={styles.padding2}>
+      <ul className={styles.margin1}>
         {todos.map((todo) => {
           return (
             <li key={todo.id}>
