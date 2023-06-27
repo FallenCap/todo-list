@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "../css/card.module.css";
+import React from 'react';
 
-const Card = (props) => {
-  return (
-    <div className={`${styles.card} ${props.className}`}>{props.children}</div>
-  );
+const cardClassName = `rounded-3xl flex flex-col`;
+
+const Card = ({ children, className }) => {
+  return <div className={`${cardClassName} ${className}`}>{children}</div>;
 };
 
 export default Card;
