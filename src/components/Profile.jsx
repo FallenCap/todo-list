@@ -48,8 +48,8 @@ const Profile = () => {
             </div>
           </div>
           <UpdateTodoProvider>
-            <TodoForm />
-            <Todos />
+            <TodoForm  />
+            <Todos  />
           </UpdateTodoProvider>
         </>
       ) : (

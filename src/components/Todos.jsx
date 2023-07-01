@@ -1,23 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import { db } from './Appwrite/appwriteConfig';
 import {
   useTodoUpdate,
   useTodoIdUpdate,
-  useBtnUpdate,
-  useBtn,
+  useInputUpdate,
+  useTodoReducer,
+  useTodoReducerUpdate,
+  ACTIONS,
 } from './Context/UpdateTodoContext';
+import swal from 'sweetalert';
 import { ThreeDots } from 'react-loader-spinner';
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
 
 const Todos = () => {
-  const [todos, setTodos] = useState();
+  const [todos, setTodos] = useState([]);
   const [loader, setLoader] = useState(false);
+
+  // TODO: Declaring custom hooks.
   const setUpdateTodo = useTodoUpdate();
   const setUpdateTodoId = useTodoIdUpdate();
-  const setUpdateBtn = useBtnUpdate();
-  const updateBtn = useBtn();
+  const setUpdateInput = useInputUpdate();
+  const reducer = useTodoReducer();
+  const forceDelete = useTodoReducerUpdate();
 
+  // *function to load data after the page loads.
   useEffect(() => {
     const loadData = async () => {
       setLoader(true);
@@ -31,17 +38,13 @@ const Todos = () => {
         console.log(err);
       }
     };
-    loadData();
-    setLoader(false);
-  }, [todos]);
-  // const updateTourHandler = async (id) => {
-  //   try {
-  //     setTodo();
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
+    setTimeout(() => {
+      loadData();
+      setLoader(false);
+    }, 500);
+  }, [reducer]);
 
+  // *Function to delete todo.
   const deleteTodoHandler = async (id) => {
     try {
       db.deleteDocument(
@@ -52,6 +55,13 @@ const Todos = () => {
     } catch (err) {
       console.log(err);
     }
+    forceDelete({ type: ACTIONS.DELETE });
+    swal({
+      title: 'Deleted',
+      text: 'Todo deleted Sucessfully',
+      icon: 'success',
+      dangerMode: false,
+    });
   };
 
   return (
@@ -88,9 +98,9 @@ const Todos = () => {
                       <AiFillEdit
                         className="hover:scale-110 ease-in-out duration-300 "
                         onClick={() => {
+                          setUpdateInput(true);
                           setUpdateTodo(item.todo);
                           setUpdateTodoId(item.$id);
-                          setUpdateBtn(!updateBtn);
                         }}
                       />
                       <FaTrash
