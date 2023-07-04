@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { account } from './Appwrite/appwriteConfig';
+import { account } from './Config/appwriteConfig';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { ThreeDots } from 'react-loader-spinner';
 import Card from './UI/Card';
 import Button from './UI/Button';
 

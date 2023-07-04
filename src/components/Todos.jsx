@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useReducer } from 'react';
-import { db } from './Appwrite/appwriteConfig';
+import { db } from './Config/appwriteConfig';
 import {
   useTodoUpdate,
   useTodoIdUpdate,

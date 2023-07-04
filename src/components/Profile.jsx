@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { account } from './Appwrite/appwriteConfig';
+import { account } from './Config/appwriteConfig';
 import { useNavigate, Link } from 'react-router-dom';
 import { UpdateTodoProvider } from './Context/UpdateTodoContext';
 import Button from './UI/Button';
