@@ -52,16 +52,37 @@ const Todos = () => {
         import.meta.env.VITE_APPWRITE_COLLECTION_ID,
         id
       );
+      forceDelete({ type: ACTIONS.DELETE });
+      swal({
+        title: 'Deleted',
+        text: 'Todo deleted Sucessfully',
+        icon: 'success',
+        dangerMode: false,
+      });
     } catch (err) {
       console.log(err);
     }
-    forceDelete({ type: ACTIONS.DELETE });
-    swal({
-      title: 'Deleted',
-      text: 'Todo deleted Sucessfully',
-      icon: 'success',
-      dangerMode: false,
-    });
+  };
+
+  // *Function to complete todo
+  const completeTodoHandler = async (id) => {
+    try {
+      await db.updateDocument(
+        import.meta.env.VITE_APPWRITE_DATABASE_ID,
+        import.meta.env.VITE_APPWRITE_COLLECTION_ID,
+        id,
+        { isCompleted: true }
+      );
+      forceDelete({ type: ACTIONS.COMPLETE });
+      swal({
+        title: 'Completed',
+        text: 'Todo completed Sucessfully',
+        icon: 'success',
+        dangerMode: false,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -86,14 +107,26 @@ const Todos = () => {
               <div key={item.$id} className="my-4">
                 <div className=" max-w-3xl mx-auto glassmorphism rounded-2xl">
                   <div className="flex p-2 justify-between">
-                    <div className="flex">
-                      <input type="checkbox" id="check" />
-                      <div className="pl-4">
+                    {item.isCompleted ? (
+                      <div className="pl-14">
                         <p className="text-blured-white font-black text-xl">
-                          {item.todo}
+                          <del>{item.todo}</del>
                         </p>
                       </div>
-                    </div>
+                    ) : (
+                      <div className="flex">
+                        <input
+                          type="checkbox"
+                          id="check"
+                          onChange={() => completeTodoHandler(item.$id)}
+                        />
+                        <div className="pl-4">
+                          <p className="text-blured-white font-black text-xl">
+                            {item.todo}
+                          </p>
+                        </div>
+                      </div>
+                    )}
                     <div className="flex justify-center items-center pr-4 text-white text-xl space-x-4">
                       <AiFillEdit
                         className="hover:scale-110 ease-in-out duration-300 "

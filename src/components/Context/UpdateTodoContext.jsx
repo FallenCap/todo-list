@@ -12,10 +12,11 @@ const TodoReducerUpdateContext = React.createContext();
 export const ACTIONS = {
   ADD: 'addReducer',
   DELETE: 'deleteReducer',
+  COMPLETE: 'completeReducer',
 };
 
 const reducer = (item, action) => {
-  if (action.type === ACTIONS.ADD) {
+  if (action.type === ACTIONS.ADD || action.type === ACTIONS.COMPLETE) {
     return item + 1;
   }
   if (action.type === ACTIONS.DELETE) {

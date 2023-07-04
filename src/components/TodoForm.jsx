@@ -40,6 +40,7 @@ const TodoForm = () => {
           uuidv4(),
           {
             todo,
+            isCompleted: false,
           }
         );
         setTodo('');

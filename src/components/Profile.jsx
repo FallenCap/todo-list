@@ -37,10 +37,10 @@ const Profile = () => {
       {userDetails ? (
         <>
           <div className="py-4"></div>
-          <div className="min-h-min max-w-6xl mx-auto flex justify-between rounded-2xl glassmorphism ">
+          <div className="min-h-min max-w-6xl mx-auto flex justify-between rounded-2xl">
             <div className="flex justify-center items-center p-4">
               <p className="text-4xl font-black text-blured-white">
-                Hello {userDetails.name}
+                Hello, {userDetails.name}
               </p>
             </div>
             <div className="p-4">
@@ -48,8 +48,8 @@ const Profile = () => {
             </div>
           </div>
           <UpdateTodoProvider>
-            <TodoForm  />
-            <Todos  />
+            <TodoForm />
+            <Todos />
           </UpdateTodoProvider>
         </>
       ) : (

@@ -8,16 +8,16 @@
   font-family: 'Roboto', sans-serif;
 }
 .bg {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1712%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1713%26quot%3b)'%3e%3c/rect%3e%3cpath d='M0 0L442.76 0L0 159.51z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 159.51L442.76 0L673.62 0L0 598.11z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 598.11L673.62 0L964.15 0L0 897.1800000000001z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 897.1800000000001L964.15 0L1337.32 0L0 923.32z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1920 1080L1140.49 1080L1920 906.84z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1920 906.84L1140.49 1080L734.2 1080L1920 797.1z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1920 797.1L734.2 1080L598.75 1080L1920 745.96z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1920 745.96L598.75 1080L302.79 1080L1920 660.83z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1712'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='89.06%25' y1='119.44%25' x2='10.94%25' y2='-19.44%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1713'%3e%3cstop stop-color='rgba(131%2c 0%2c 176%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(131%2c 0%2c 176%2c 1)' offset='0.12'%3e%3c/stop%3e%3cstop stop-color='rgba(28%2c 0%2c 37%2c 1)' offset='0.96'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1356%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1357%26quot%3b)'%3e%3c/rect%3e%3cpath d='M0 0L90.04 0L0 297.9z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 297.9L90.04 0L616.91 0L0 478.78z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 478.78L616.91 0L1190.3600000000001 0L0 666.16z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 666.16L1190.3600000000001 0L1512.7600000000002 0L0 820.9499999999999z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1920 1080L1125.49 1080L1920 718.31z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1920 718.31L1125.49 1080L655.25 1080L1920 605.29z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1920 605.29L655.25 1080L437.63 1080L1920 352.4z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1920 352.4000000000001L437.6300000000001 1080L348.1400000000001 1080L1920 296.6600000000001z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1356'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='10.94%25' y1='-19.44%25' x2='89.06%25' y2='119.44%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1357'%3e%3cstop stop-color='rgba(11%2c 1%2c 11%2c 1)' offset='0.27'%3e%3c/stop%3e%3cstop stop-color='rgba(84%2c 8%2c 28%2c 1)' offset='0.79'%3e%3c/stop%3e%3cstop stop-color='rgba(84%2c 8%2c 28%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
   /* background-color: black; */
   height: 100vh;
-  width: 100wh;
+  width: 100vw;
 }
 
 .glassmorphism {
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.334) 0%,
+    rgba(255, 255, 255, 0.178) 0%,
     rgba(255, 255, 255, 0.1) 100%
   );
   border-radius: 30px;
@@ -34,7 +34,7 @@ input[type='checkbox'] {
   width: 20px;
   margin: auto 0 auto 1rem;
   background-color: transparent;
-  border: 3px solid #515151;
+  border: 3px solid #ffffff;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -43,14 +43,14 @@ input[type='checkbox'] {
 }
 input[type='checkbox']:after {
   content: '\2713';
-  color: #515151;
+  color: #ffffff;
   font-weight: 1000;
   display: none;
 }
 input[type='checkbox']:checked {
-  background-color: #515151;
+  background-color: #ffffff;
 }
 input[type='checkbox']:checked:after {
-  color: white;
+  color: rgb(0, 0, 0);
   display: block;
 }
