@@ -24,7 +24,7 @@ const reducer = (item, action) => {
   }
 };
 
-// *Custom hook
+// *Custom hooks
 export const useTodo = () => {
   return useContext(TodoContext);
 };

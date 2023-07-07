@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { account } from './Config/appwriteConfig';
 import { useNavigate, Link } from 'react-router-dom';
 import { UpdateTodoProvider } from './Context/UpdateTodoContext';
+import { useUserIdUpdate } from './Context/GetUserIdContext';
 import Button from './UI/Button';
 import TodoForm from './TodoForm';
 import Todos from './Todos';
@@ -9,12 +10,14 @@ import Todos from './Todos';
 const Profile = () => {
   const [userDetails, setUserDetails] = useState();
   const navigate = useNavigate();
+  const setUserId = useUserIdUpdate();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const getData = await account.get();
         setUserDetails(getData);
+        setUserId(getData.$id);
       } catch (err) {
         console.log(err);
       }

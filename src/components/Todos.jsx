@@ -8,14 +8,17 @@ import {
   useTodoReducerUpdate,
   ACTIONS,
 } from './Context/UpdateTodoContext';
+import { useUserId } from './Context/GetUserIdContext';
 import swal from 'sweetalert';
 import { ThreeDots } from 'react-loader-spinner';
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
+import { Query } from 'appwrite';
 
 const Todos = () => {
   const [todos, setTodos] = useState([]);
   const [loader, setLoader] = useState(false);
+  // const [userId, setUserId] = useState('');
 
   // TODO: Declaring custom hooks.
   const setUpdateTodo = useTodoUpdate();
@@ -23,6 +26,7 @@ const Todos = () => {
   const setUpdateInput = useInputUpdate();
   const reducer = useTodoReducer();
   const forceDelete = useTodoReducerUpdate();
+  const userId = useUserId();
 
   // *function to load data after the page loads.
   useEffect(() => {
@@ -31,7 +35,8 @@ const Todos = () => {
       try {
         const getTodos = await db.listDocuments(
           import.meta.env.VITE_APPWRITE_DATABASE_ID,
-          import.meta.env.VITE_APPWRITE_COLLECTION_ID
+          import.meta.env.VITE_APPWRITE_COLLECTION_ID,
+          [Query.equal('userId', userId)]
         );
         setTodos(getTodos.documents);
       } catch (err) {

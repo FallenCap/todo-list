@@ -10,12 +10,14 @@ import {
   useInputUpdate,
   ACTIONS,
 } from './Context/UpdateTodoContext';
+import { useUserId } from './Context/GetUserIdContext';
 import Button from './UI/Button';
 import swal from 'sweetalert';
 
 const TodoForm = () => {
   const [todo, setTodo] = useState('');
   const [updatedTodo, setUpdatedTodo] = useState('');
+
   // TODO: Declaring custom hooks.
   const updateTodo = useTodo();
   const setUpdateTodo = useTodoUpdate();
@@ -23,6 +25,7 @@ const TodoForm = () => {
   const updatedInput = useInput();
   const forceAdd = useTodoReducerUpdate();
   const setUpdateInput = useInputUpdate();
+  const userId = useUserId();
 
   useEffect(() => {
     setUpdatedTodo(updateTodo);
@@ -41,6 +44,7 @@ const TodoForm = () => {
           {
             todo,
             isCompleted: false,
+            userId,
           }
         );
         setTodo('');

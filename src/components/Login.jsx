@@ -21,6 +21,7 @@ const Login = () => {
       await account.createEmailSession(user.email, user.password);
       setLoading(false);
       // console.log(promise);
+      const data = await account.get();
       navigate('/profile');
     } catch (err) {
       console.log(err);
