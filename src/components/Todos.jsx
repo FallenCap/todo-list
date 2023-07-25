@@ -110,11 +110,11 @@ const Todos = () => {
           {todos &&
             todos.map((item) => (
               <div key={item.$id} className="my-4">
-                <div className=" max-w-3xl mx-auto glassmorphism rounded-2xl">
+                <div className="w-72 md:w-1/2 mx-auto glassmorphism rounded-2xl">
                   <div className="flex p-2 justify-between">
                     {item.isCompleted ? (
                       <div className="pl-14">
-                        <p className="text-blured-white font-black text-xl">
+                        <p className="text-blured-white font-black text-lg md:text-xl">
                           <del>{item.todo}</del>
                         </p>
                       </div>
@@ -126,7 +126,7 @@ const Todos = () => {
                           onChange={() => completeTodoHandler(item.$id)}
                         />
                         <div className="pl-4">
-                          <p className="text-blured-white font-black text-xl">
+                          <p className="text-blured-white font-black text-lg md:text-xl">
                             {item.todo}
                           </p>
                         </div>
@@ -134,7 +134,7 @@ const Todos = () => {
                     )}
                     <div className="flex justify-center items-center pr-4 text-white text-xl space-x-4">
                       <AiFillEdit
-                        className="hover:scale-110 ease-in-out duration-300 "
+                        className="hover:scale-110 ease-in-out duration-300 text-lg md:text-2xl"
                         onClick={() => {
                           setUpdateInput(true);
                           setUpdateTodo(item.todo);
@@ -142,7 +142,7 @@ const Todos = () => {
                         }}
                       />
                       <FaTrash
-                        className="hover:scale-110 ease-in-out duration-300 "
+                        className="hover:scale-110 ease-in-out duration-300 text-base md:text-xl"
                         onClick={() => {
                           deleteTodoHandler(item.$id);
                         }}

@@ -42,7 +42,7 @@ const Profile = () => {
           <div className="py-4"></div>
           <div className="min-h-min max-w-6xl mx-auto flex justify-between rounded-2xl">
             <div className="flex justify-center items-center p-4">
-              <p className="text-4xl font-black text-blured-white">
+              <p className="text-2xl md:text-4xl font-black text-blured-white">
                 Hello, {userDetails.name}
               </p>
             </div>
